@@ -1,17 +1,16 @@
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
-import Home from "./pages/Home";
 
 function App() {
 
   return(
     <>
 
-    <Navbar></Navbar>
+    <Navbar />
 
-    <Home></Home>
+    <Outlet />
 
-    <Footer></Footer>
+    <Footer />
 
     </>
 

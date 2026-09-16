@@ -1,4 +1,4 @@
-function Card() {
+function ProductCard() {
 
     return(
 
@@ -26,4 +26,4 @@ function Card() {
 
 }
 
-export default Card;
+export default ProductCard;
