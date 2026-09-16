@@ -1,6 +1,5 @@
 import ProductCard from "../components/ProductCard";
 
-
 function Shop() {
 
 
@@ -13,3 +12,5 @@ function Shop() {
     
     );
 }
+
+export default Shop;

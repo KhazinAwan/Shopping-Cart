@@ -1,10 +1,7 @@
-import { createBrowserRouter, RouterProvider } from "react-router";
-
+import App from "./App";
 import Home from "./pages/Home";
 import Shop from "./pages/Shop";
 import Cart from "./pages/Cart";
-import App from "./App";
-import { Children } from "react";
 
 const routes = [
 
