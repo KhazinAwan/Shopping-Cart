@@ -1,14 +1,14 @@
-function ProductCard() {
+function ProductCard({product}) {
 
     return(
 
         <article>
 
-            <h2>Product Name</h2>
+            <h2>{product.title}</h2>
 
-            <img src="" alt="Product image" />
+            <img src={product.image} alt={product.title} />
 
-            <p>$4.00</p>
+            <p>{product.price}</p>
 
             <div>
 
