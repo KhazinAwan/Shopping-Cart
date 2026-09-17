@@ -1,4 +1,8 @@
+import { useState } from "react";
+
 function ProductCard({product}) {
+
+    const [quantity, setQuantity] = useState(1);
 
     return(
 
@@ -12,13 +16,13 @@ function ProductCard({product}) {
 
             <div>
 
-                <button type="button">-</button>
-                <input type="number" min={1} defaultValue={1}/>
-                <button type="button">+</button>
+                <button type="button" onClick={() => setQuantity(Math.max(1, quantity - 1))}>-</button>
+                <input type="number" min={1} value={quantity} onChange={(event) => setQuantity(Number(event.target.value))}/>
+                <button type="button" onClick={() => setQuantity(quantity + 1)}>+</button>
                 
             </div>
 
-            <button type="button">Add ot Cart</button>
+            <button type="button">Add to Cart</button>
 
         </article>
 
