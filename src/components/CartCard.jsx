@@ -1,23 +1,46 @@
-function CartCard() {
+import { useContext } from "react";
+import { CartContext } from "../contexts/CartContext";
+
+function CartCard({ item }) {
+
+    const { cart, setCart } = useContext(CartContext);
+
+    function updateQuantity(newQuantity) {
+
+        if(newQuantity < 1) return;
+
+        const updatedCart = cart.map((product) => (
+
+            product.id === item.id
+                ? { ...product, quantity: newQuantity }
+                : product 
+
+        ));
+
+        setCart(updatedCart);
+
+    }
 
     return (
 
         <article>
 
-            <h2>Product Name</h2>
+            <h2>{item.title}</h2>
 
-            <img src="" alt="Product image" />
+            <img src={item.image} alt={item.title} />
 
 
             <div>
 
-                <button type="button">-</button>
-                <input type="number" min={1} defaultValue={1} />
-                <button type="button">+</button>
+                <button type="button" onClick={() => updateQuantity(item.quantity - 1)} >-</button>
+
+                <input type="number" min={1} value={item.quantity} onChange={(event) => updateQuantity(Number(event.target.value))} />
+
+                <button type="button" onClick={() => updateQuantity(item.quantity + 1)}>+</button>
 
             </div>
 
-            <p>$4.00</p>
+            <p>{item.price}</p>
 
 
             <button type="button">Remove from Cart</button>

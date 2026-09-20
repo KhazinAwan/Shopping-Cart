@@ -1,10 +1,20 @@
+import { useContext } from "react";
+import { CartContext } from "../contexts/CartContext";
 import CartCard from "../components/CartCard";
 
 function Cart() {
 
-    return(
+    const { cart } = useContext(CartContext);
+
+    return (
 
         <main>
+
+        {cart.map((item) => (
+
+        <CartCard key={item.id} item={item} />
+
+        ))}
 
         </main>
     );
