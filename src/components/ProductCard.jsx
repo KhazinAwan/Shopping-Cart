@@ -24,7 +24,7 @@ function ProductCard({ product }) {
 
 
 
-            setCart();
+            setCart(updatedCart);
         }
 
         else {

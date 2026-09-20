@@ -21,6 +21,14 @@ function CartCard({ item }) {
 
     }
 
+    function removeFromCart() {
+
+        const updatedCart = cart.filter((product) => product.id !== item.id);
+
+        setCart(updatedCart);
+
+    }
+
     return (
 
         <article>
@@ -43,7 +51,7 @@ function CartCard({ item }) {
             <p>{item.price}</p>
 
 
-            <button type="button">Remove from Cart</button>
+            <button type="button" onClick={ removeFromCart }>Remove from Cart</button>
 
         </article>
 
