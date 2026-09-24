@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import { CartContext } from "../contexts/CartContext";
+import { Link } from "react-router";
 
 function Navbar() {
 
@@ -10,19 +11,19 @@ function Navbar() {
         <nav>
             <ul>
                 <li>
-                    <a href="/">Home</a>
+                    <Link to="/">Home</Link>
                 </li>
             </ul>
 
             <ul>
                 <li>
-                    <a href="/shop">Shop</a>
+                    <Link to="/shop">Shop</Link>
                 </li>
             </ul>
 
             <ul>
                 <li>
-                    <a href="/cart">Cart {cart.reduce((total, product) => total + product.quantity, 0)}</a>
+                    <Link to="/cart">Cart {cart.reduce((total, product) => total + product.quantity, 0)}</Link>
                 </li>
             </ul>
         </nav>
