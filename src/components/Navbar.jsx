@@ -8,7 +8,7 @@ function Navbar() {
 
     return(
 
-        <nav className="flex justify-between p-4 bg-gray-800 text-white">
+        <nav className="flex justify-between p-5 bg-gray-800 text-white">
             <ul>
                 <li>
                     <Link to="/" className="hover:underline hover:decoration-amber-400 hover:underline-offset-4 focus:outline-none focus:ring-2 focus:ring-amber-400 focus:ring-offset-4 focus:ring-offset-gray-800">Home</Link>
