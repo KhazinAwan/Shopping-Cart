@@ -4,7 +4,7 @@ import ProductCard from "../components/ProductCard";
 
 function Shop() {
 
-    const[products, setProducts] = useState([]);
+    const [products, setProducts] = useState([]);
 
     useEffect(() => {
 
@@ -16,16 +16,15 @@ function Shop() {
 
     return (
 
-        <main>
+            <main className="flex justify-center flex-wrap gap-8 py-8">
 
-        {products.map((product) => (
+                {products.map((product) => (
 
-            <ProductCard key={product.id} product={product}/>
+                    <ProductCard key={product.id} product={product} />
 
-        ))}
+                ))}
 
-        </main>
-
+            </main>
 
     );
 }
