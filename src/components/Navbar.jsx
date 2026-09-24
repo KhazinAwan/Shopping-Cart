@@ -8,7 +8,7 @@ function Navbar() {
 
     return(
 
-        <nav className="flex justify-between p-5 bg-gray-800 text-white">
+        <nav className="flex justify-between p-5 bg-gray-800 text-white sticky top-0 z-10">
             <ul>
                 <li>
                     <Link to="/" className="hover:underline hover:decoration-amber-400 hover:underline-offset-4 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400 focus-visible:ring-offset-4 focus-visible:ring-offset-gray-800">Home</Link>
@@ -21,7 +21,7 @@ function Navbar() {
                 </li>
 
                 <li>
-                    <Link to="/cart" className="hover:underline hover:decoration-amber-400 hover:underline-offset-4 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400 focus-visible:ring-offset-4 focus-visible:ring-offset-gray-800">Cart {cart.reduce((total, product) => total + product.quantity, 0)}</Link>
+                    <Link to="/cart" className="hover:underline hover:decoration-amber-400 hover:underline-offset-4 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400 focus-visible:ring-offset-4 focus-visible:ring-offset-gray-800">Cart ({cart.reduce((total, product) => total + product.quantity, 0)})</Link>
                 </li>
             </ul>
         </nav>
