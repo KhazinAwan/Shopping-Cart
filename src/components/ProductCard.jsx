@@ -59,6 +59,8 @@ return (
 
         <div className="flex items-center gap-2">
 
+            <p className="text-xl font-bold text-gray-800 pr-4">Quantity: </p>
+
             <button type="button" aria-label="Decrease quantity" className="rounded-md border border-gray-400 px-3 py-1 hover:bg-gray-100" onClick={() => setQuantity(Math.max(1, quantity - 1))}>-</button>
             <input type="number" min={1} value={quantity} className="w-16 rounded-md border border-gray-400 px-2 py-1 text-center" onChange={(event) => setQuantity(Number(event.target.value))} />
             <button type="button" aria-label="Increase quantity" className="rounded-md border border-gray-400 px-3 py-1 hover:bg-gray-100" onClick={() => setQuantity(quantity + 1)}>+</button>

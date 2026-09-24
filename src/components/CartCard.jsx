@@ -31,27 +31,27 @@ function CartCard({ item }) {
 
     return (
 
-        <article>
+        <article className="flex w-full max-w-80 flex-col gap-5 rounded-lg border-3 border-gray-400 p-6">
 
-            <h2>{item.title}</h2>
+            <h2 className="text-lg font-semibold text-center">{item.title}</h2>
 
-            <img src={item.image} alt={item.title} />
+            <img src={item.image} alt={item.title} className="h-48 w-full object-contain" />
 
+            <p className="text-xl font-bold text-gray-800 ">Total Price: ${item.price*item.quantity}</p>
 
-            <div>
+            <div className="flex items-center gap-2">
 
-                <button type="button" onClick={() => updateQuantity(item.quantity - 1)} >-</button>
+                <p className="text-xl font-bold text-gray-800 pr-4">Quantity: </p>
 
-                <input type="number" min={1} value={item.quantity} onChange={(event) => updateQuantity(Number(event.target.value))} />
+                <button type="button" aria-label="Decrease quantity" className="rounded-md border border-gray-400 px-3 py-1 hover:bg-gray-100" onClick={() => updateQuantity(item.quantity - 1)} >-</button>
 
-                <button type="button" onClick={() => updateQuantity(item.quantity + 1)}>+</button>
+                <input type="number" min={1} value={item.quantity} className="w-16 rounded-md border border-gray-400 px-2 py-1 text-center" onChange={(event) => updateQuantity(Number(event.target.value))} />
+
+                <button type="button" aria-label="Increase quantity" className="rounded-md border border-gray-400 px-3 py-1 hover:bg-gray-100"onClick={() => updateQuantity(item.quantity + 1)}>+</button>
 
             </div>
 
-            <p>{item.price}</p>
-
-
-            <button type="button" onClick={ removeFromCart }>Remove from Cart</button>
+            <button type="button" className="rounded-md bg-amber-500 px-4 py-2 font-semibold text-white hover:bg-amber-600 focus:outline-none focus-visible:ring-2 focus-visible:ring-gray-600 focus-visible:ring-offset-2 active:scale-95 active:bg-amber-700" onClick={ removeFromCart }>Remove from Cart</button>
 
         </article>
 
