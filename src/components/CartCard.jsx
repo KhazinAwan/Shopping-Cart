@@ -31,9 +31,9 @@ function CartCard({ item }) {
 
     return (
 
-        <article className="flex w-full max-w-80 flex-col gap-5 rounded-lg border-3 border-gray-400 p-6">
+        <article className="flex w-full max-w-80 flex-col gap-5 rounded-lg border-3 border-gray-400 p-6 transition hover:-translate-y-1 hover:shadow-2xl hover:border-amber-500">
 
-            <h2 className="text-lg font-semibold text-center">{item.title}</h2>
+            <h2 className="text-lg font-semibold text-center min-h-14 line-clamp-2">{item.title}</h2>
 
             <img src={item.image} alt={item.title} className="h-48 w-full object-contain" />
 

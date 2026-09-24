@@ -8,7 +8,7 @@ function Cart() {
 
     return (
 
-        <main>
+        <main className="flex flex-1 flex-wrap justify-center items-start gap-8 px-4 py-8 ">
 
         {cart.map((item) => (
 

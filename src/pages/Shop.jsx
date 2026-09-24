@@ -16,7 +16,7 @@ function Shop() {
 
     return (
 
-            <main className="flex justify-center flex-wrap gap-8 py-8">
+            <main className="flex flex-1 flex-wrap justify-center items-start gap-8 px-4 py-8">
 
                 {products.map((product) => (
 
